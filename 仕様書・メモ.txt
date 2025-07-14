@@ -190,3 +190,5 @@ css
   background-color: #000;
   transform: translateY(-50%);
 }
+
+◆ヘッダー、フッターをいじった可能性があるので、price,faqで注意
