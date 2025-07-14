@@ -1,0 +1,192 @@
+    ◆ダミーのURLとしてhttps://example.comを設定
+    下層ページの場合は以下のように設定してください
+    https://example.com/spec/
+    https://example.com/faq/
+
+◆横幅768px未満：SP表示
+横幅768px以上：PC表示
+
+◆デザインで使用されているフォントは以下の4種類になります。
+・Noto Sans JP Regular（https://fonts.google.com/noto/specimen/Noto+Sans+JP?query=noto+sans+jp）
+・Noto Sans JP Bold（https://fonts.google.com/noto/specimen/Noto+Sans+JP?query=noto+sans+jp）
+・Montserrat SemiBold（https://fonts.google.com/specimen/Montserrat?query=Montserrat）
+・Montserrat Bold（https://fonts.google.com/specimen/Montserrat?query=Montserrat）
+
+font-family: "Noto Sans JP", sans-serif;
+font-family: "Montserrat", sans-serif;
+
+    ◆リンク先指定
+    価格・スペック	/price
+    よくあるご質問	/faq
+    ニュース一覧へ	/news
+    お問い合わせ	/contact
+
+    ◆セクション名
+    TOP：
+    about features products case news
+
+    価格・スペック：
+    gallery merit price spec contac
+
+    faq
+    なし（アコーディオンのみ）
+
+
+◆クローズボタン
+.close-btn {
+  position: relative;
+  width: 32px; /* ボタン全体のサイズ */
+  height: 32px; /* ボタン全体のサイズ */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px; /* ← ここを調整（長くしたいなら数値を大きく）*/
+  height: 2px; /* ← ここを調整（太くしたいなら数値を大きく）*/
+  background-color: #333; /* ← 任意の色に変更 */
+  transform-origin: center;
+}
+
+.close-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+◆線の色が途中から変わる装飾
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #168352 15%, #ddd 15%);
+}
+
+◆アコーディオンの実装例
+html
+※複数のアコーディオンがあるなら、全体を
+<div class="accordion-list">　で書こうとよい
+
+<details class="accordion">
+  <summary>
+    <div class="accordion__header">
+      <div class="accordion__question">
+        <span class="accordion__label">Q.ご利用について</span>
+        <span class="accordion__icon"></span>
+      </div>
+      <div class="accordion__subtext">
+        農業用ドローンの主な用途は何ですか？
+      </div>
+    </div>
+  </summary>
+  <p class="accordion__content">
+    農業用ドローンは、作物の健康状態のモニタリング、除草剤・肥料等の散布、灌漑システムの管理など、農業生産の効率を向上させるために使用されます。
+  </p>
+</details>
+
+css
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+
+.accordion summary {
+  cursor: pointer;
+  list-style: none; /* デフォルトの△を削除 */
+}
+
+.accordion__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.accordion__subtext {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.accordion__content {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.accordion[open] .accordion__icon::after {
+  content: "－";
+}
+
+.accordion__icon::after {
+  content: "＋";
+}
+
+◆＋マークのコード例
+<div class="icon-plus"></div>
+
+.icon-plus {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-plus::before,
+.icon-plus::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+}
+
+.icon-plus::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.icon-plus::after {
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+◆「ー」マークの記述例
+<div class="icon-minus"></div>
+
+.icon-minus {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-minus::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transform: translateY(-50%);
+}
