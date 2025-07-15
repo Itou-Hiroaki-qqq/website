@@ -25,11 +25,11 @@
 <body>
     <header>
         <div class="wrapper wrapper--header">
-            <h1 class="site-title"><a href="index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a></h1>
+            <h1 class="site-title"><a href="../index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a></h1>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="../website/price/index.html">価格・スペック</a></li>
-                    <li class="nav__item nav__item--current"><a href="../website/faq/index.html">よくあるご質問</a></li>
+                    <li class="nav__item"><a href="../price/index.html">価格・スペック</a></li>
+                    <li class="nav__item nav__item--current"><a href="../faq/index.html">よくあるご質問</a></li>
                 </ul>
             </nav>
 
@@ -45,13 +45,15 @@
         <article>
             <h2 class="visually-hidden">よくあるご質問</h2> <!-- articleに見出しをつけるためであり視覚的には非表示とする -->
             <section class="subpage-hero wrapper">
-                <picture class="subpage-hero__img">
-                    <source
-                    srcset="../assets/images/04_faq/mainVisual_pc.png"
-                    media="(min-width: 768px)">
-                    <img src="../assets/images/04_faq/mainVisual_sp.png" alt="">
-                </picture>
-                <h3 class="subpage-hero__title">よくあるご質問</h3>
+                <div class="subpage-hero__wrapper">
+                    <picture class="subpage-hero__img">
+                        <source
+                        srcset="../assets/images/04_faq/mainVisual_pc.png"
+                        media="(min-width: 768px)">
+                        <img src="../assets/images/04_faq/mainVisual_sp.png" alt="">
+                    </picture>
+                    <h3 class="subpage-hero__title">よくあるご質問</h3>
+                </div>
                 <nav class="subpage-hero__nav" aria-label="パンくずリスト">
                     <ol class="subpage-hero__breadcrumb">
                         <li class="subpage-hero__breadcrumb-item"><a href="../index.html">トップ</a></li>
@@ -87,8 +89,10 @@
                                 <span class="accordion__question-head">
                                     <span class="accordion__question-label">
                                         <span class="label-q">Q.</span>
-                                        <span class="label-topic">ご利用について</span>
-                                        <span class="label-topic">製品について</span>
+                                        <span class="label-topicGroup">
+                                            <span class="label-topic">ご利用について</span>
+                                            <span class="label-topic">製品について</span>
+                                        </span>
                                     </span>
                                     <span class="accordion__icon"></span>
                                 </span>
@@ -108,8 +112,10 @@
                                 <span class="accordion__question-head">
                                     <span class="accordion__question-label">
                                         <span class="label-q">Q.</span>
-                                        <span class="label-topic">ご利用について</span>
-                                        <span class="label-topic">製品について</span>
+                                        <span class="label-topicGroup">
+                                            <span class="label-topic">ご利用について</span>
+                                            <span class="label-topic">製品について</span>
+                                        </span>
                                     </span>
                                     <span class="accordion__icon"></span>
                                 </span>
@@ -129,8 +135,10 @@
                                 <span class="accordion__question-head">
                                     <span class="accordion__question-label">
                                         <span class="label-q">Q.</span>
-                                        <span class="label-topic">ご利用について</span>
-                                        <span class="label-topic">使用について</span>
+                                        <span class="label-topicGroup">
+                                            <span class="label-topic">ご利用について</span>
+                                            <span class="label-topic">使用について</span>
+                                        </span>
                                     </span>
                                     <span class="accordion__icon"></span>
                                 </span>
@@ -210,8 +218,10 @@
                                 <span class="accordion__question-head">
                                     <span class="accordion__question-label">
                                         <span class="label-q">Q.</span>
-                                        <span class="label-topic">使用について</span>
-                                        <span class="label-topic">製品について</span>
+                                        <span class="label-topicGroup">
+                                            <span class="label-topic">使用について</span>
+                                            <span class="label-topic">製品について</span>
+                                        </span>
                                     </span>
                                     <span class="accordion__icon"></span>
                                 </span>
@@ -251,8 +261,10 @@
                                 <span class="accordion__question-head">
                                     <span class="accordion__question-label">
                                         <span class="label-q">Q.</span>
-                                        <span class="label-topic">使用について</span>
-                                        <span class="label-topic">製品について</span>
+                                        <span class="label-topicGroup">
+                                            <span class="label-topic">使用について</span>
+                                            <span class="label-topic">製品について</span>
+                                        </span>
                                     </span>
                                     <span class="accordion__icon"></span>
                                 </span>
@@ -272,8 +284,10 @@
                                 <span class="accordion__question-head">
                                     <span class="accordion__question-label">
                                         <span class="label-q">Q.</span>
-                                        <span class="label-topic">ご利用について</span>
-                                        <span class="label-topic">製品について</span>
+                                        <span class="label-topicGroup">
+                                            <span class="label-topic">ご利用について</span>
+                                            <span class="label-topic">製品について</span>
+                                        </span>
                                     </span>
                                     <span class="accordion__icon"></span>
                                 </span>

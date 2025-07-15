@@ -18,7 +18,16 @@
     navClose.classList.remove('open');
   });
 
-
+  // アコーディオンをスムーズに開くための制御
+  document.querySelectorAll('.accordion').forEach((accordion) => {
+    accordion.addEventListener('toggle', () => {
+      if (accordion.open) {
+        accordion.classList.add('open');
+      } else {
+        accordion.classList.remove('open');
+      }
+    });
+  });
 
 
 }; //script END

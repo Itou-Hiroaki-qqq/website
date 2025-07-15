@@ -50,6 +50,10 @@ img {
   background: linear-gradient(to right, #168352 14%, #ddd 14%);
 }
 
+.visually-hidden {
+  display: none;
+}
+
 
 /* common PC */
 @media  (min-width:769px) {
@@ -241,6 +245,360 @@ header {
 
 
 
+/*
+subpage-hero
+================================================ */
+.subpage-hero {
+  margin-top: 83px;
+}
+
+.subpage-hero__img img {
+  width: 100%;
+  aspect-ratio: 358 / 230;
+  object-fit: cover;
+}
+
+.subpage-hero__title {
+  margin-top: 32px;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.subpage-hero__nav {
+  margin-top: 32px;
+}
+
+.subpage-hero__breadcrumb {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.subpage-hero__breadcrumb-item a {
+  font-size: 0.75rem;
+}
+
+/* パンくず用矢印の作成 */
+.subpage-hero__breadcrumb-item:first-of-type {
+  position: relative;
+}
+
+.subpage-hero__breadcrumb-item:first-of-type::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-inline: 8px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  vertical-align: 1px; /* ← 縦位置を調整 */
+}
+
+
+/* subpage-hero PC */
+@media  (min-width:769px) {
+    .subpage-hero {
+      margin-top: 154px;
+    }
+
+    .subpage-hero__wrapper {
+      /* subpage-hero__titleの配置のためのposition */
+      position: relative;
+    }
+
+    .subpage-hero__img img {
+      aspect-ratio: 1200 / 550;
+      border-radius: 24px;
+    }
+
+    .subpage-hero__title {
+      margin-top: 0;
+      font-size: 2.25rem;
+      padding: 39px 36px 40px 40px;
+      background-color: #fff;
+      line-height: 1;
+      border-radius: 0 40px 0 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 8;
+    }
+
+    .subpage-hero__nav {
+      margin-top: 24px;
+    }
+
+    .subpage-hero__breadcrumb-item a {
+      font-size: 0.75rem;
+    }
+
+} /* @media  (min-width:769px) */
+
+
+/*
+accordion-list
+================================================ */
+.accordion-list {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding-bottom: 170px;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.accordion:not(:first-of-type) {
+  margin-top: 24px;
+}
+
+.accordion summary {
+  cursor: pointer;
+  list-style: none; /* デフォルトの△を削除 */
+}
+
+.accordion__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__question-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__question-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.label-topicGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.accordion__question-label .label-q {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #168352;
+  margin-right: 15px;
+}
+
+.accordion__question-label .label-topic {
+  width: 100px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  color: #168352;
+  border: 1px solid #168352;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.accordion__question-body {
+  margin: 8px 0 0 42px;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.accordion__answer {
+  margin-top: 16px;
+  font-size: 1rem;
+}
+
+/* 開閉時にtransitionをつけるための設定 */
+.accordion__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.accordion.open .accordion__answer {
+  max-height: 122px; /* 十分な高さを指定（実際の内容に応じて調整） */
+}
+
+
+/* ＋－ボタンの共通スタイル */
+.accordion__icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+/* －ボタンのスタイル */
+.accordion[open] .accordion__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: translateY(-50%);
+}
+
+/* ＋ボタンのスタイル */
+.accordion__icon::before,
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+}
+
+.accordion__icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  transform: translateY(-50%);
+}
+
+.accordion__icon::after {
+  left: 50%;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+
+/* accordion-list PC */
+@media  (min-width:769px) {
+    .accordion-list {
+      max-width: 800px;
+      margin: 64px auto 0;
+      padding-bottom: 72px;
+    }
+
+    .accordion {
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      padding: 24px 32px;
+    }
+
+    .accordion:not(:first-of-type) {
+      margin-top: 24px;
+    }
+
+    .accordion summary {
+      cursor: pointer;
+      list-style: none; /* デフォルトの△を削除 */
+    }
+
+    .accordion__header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .accordion__question-head {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .accordion__question-label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .accordion__question-label .label-q {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #168352;
+      margin-right: 14px;
+    }
+
+    .accordion__question-label .label-topic {
+      width: 100px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6875rem;
+      color: #168352;
+      border: 1px solid #168352;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+
+    .accordion__question-body {
+      margin: 16px 0 0 41px;
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+
+    .accordion__answer {
+      margin-top: 32px;
+      font-size: 1rem;
+    }
+
+    /* 開閉時にtransitionをつけるための設定 */
+    .accordion__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .accordion.open .accordion__answer {
+      max-height: 75px; /* 十分な高さを指定（実際の内容に応じて調整） */
+    }
+
+
+    /* ＋－ボタンの共通スタイル */
+    .accordion__icon {
+      position: relative;
+      width: 20px;
+      height: 20px;
+    }
+
+    /* －ボタンのスタイル */
+    .accordion[open] .accordion__icon::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      transform: translateY(-50%);
+    }
+
+    /* ＋ボタンのスタイル */
+    .accordion__icon::before,
+    .accordion__icon::after {
+      content: "";
+      position: absolute;
+      background-color: #000;
+    }
+
+    .accordion__icon::before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      transform: translateY(-50%);
+    }
+
+    .accordion__icon::after {
+      left: 50%;
+      top: 0;
+      width: 1.5px;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+
+} /* @media  (min-width:769px) */
 
 
 /*
