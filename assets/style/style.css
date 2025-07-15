@@ -682,6 +682,10 @@ news
   box-shadow: 0 5px 0 rgba(6,102,85,1);
 }
 
+.news__btn:hover {
+  opacity: 0.6;
+}
+
 .news__btn:active {
   transform: translateY(4px);
   box-shadow: none;

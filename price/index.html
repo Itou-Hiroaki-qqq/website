@@ -18,43 +18,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
     <!-- SwiperのCSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="price.css">
+
 </head>
 <body>
-    <header class="wrapper">
-        <h1 class="site-title"><a href="../index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a></h1>
-        <nav class="nav">
-            <div class="nav__header">
-                <a class="nav__name" href="../index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a>
-                <button class="nav__close" type="button" aria-label="メニューを閉じる"></button>
-            </div>
-            <ul class="nav__list">
-                <li class="nav__item nav__item--green"><a href="../price/index.html">価格・スペック</a></li>
-                <li class="nav__item"><a href="../faq/index.html">よくあるご質問</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="wrapper wrapper--header">
+            <h1 class="site-title"><a href="index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a></h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--current"><a href="../website/price/index.html">価格・スペック</a></li>
+                    <li class="nav__item"><a href="../website/faq/index.html">よくあるご質問</a></li>
+                </ul>
+            </nav>
 
-        <!-- humburgar -->
-        <button class="humburgar" type="button" aria-label="メニューを開く">
-            <img src="assets/images/01_header/hamburgar.svg" alt="">
-        </button>
+            <!-- humburgar -->
+            <button class="humburgar" type="button" aria-label="メニューを開く">
+                <img src="../assets/images/01_header/hamburgar.svg" alt="">
+            </button>
+            <button class="nav__close" type="button" aria-label="メニューを閉じる"></button>
+        </div>
     </header>
 
     <main>
         <article>
             <div class="subpage-hero wrapper">
-                <picture class="subpage-hero__img">
-                    <source
-                    srcset="../assets/images/03_products_service/mainVisual_pc.png"
-                    media="(min-width: 768px)">
-                    <img src="../assets/images/03_products_service/mainVisual_sp.png" alt="">
-                </picture>
-                <h2 class="subpage-hero__title">価格・スペック</h2>
+                <div class=" subpage-hero__wrapper">
+                    <picture class="subpage-hero__img">
+                        <source
+                        srcset="../assets/images/03_products_service/mainVisual_pc.png"
+                        media="(min-width: 768px)">
+                        <img src="../assets/images/03_products_service/mainVisual_sp.png" alt="">
+                    </picture>
+                    <h2 class="subpage-hero__title">価格・スペック</h2>
+                </div>
                 <nav class="subpage-hero__nav" aria-label="パンくずリスト">
                     <ol class="subpage-hero__breadcrumb">
                         <li class="subpage-hero__breadcrumb-item"><a href="../index.html">トップ</a></li>
-                        <!-- arrowはCSSで指定 -->
                         <li class="subpage-hero__breadcrumb-item"><a href="../price/index.html">価格・スペック</a></li>
                     </ol>
                 </nav>
@@ -107,30 +111,34 @@
 
                 <section class="spec">
                     <h3 class="products-topic">スペック</h3>
-                    <h4 class="spec__title">機体</h4>
-                    <dl class="spec__list">
-                        <dt>ドローン名</dt>
-                        <dd>アグリ・ファルコン</dd>
-                        <dt>製品番号</dt>
-                        <dd>AGF-100</dd>
-                        <dt>飛行時間</dt>
-                        <dd>60 分</dd>
-                        <dt>最大積載量</dt>
-                        <dd>5 kg</dd>
-                        <dt>操作距離</dt>
-                        <dd>3 km</dd>
-                        <dt>機体重量</dt>
-                        <dd>8 kg</dd>
-                        <dt>機体寸法</dt>
-                        <dd>150 x 150 x 40 cm</dd>
-                        <dt>機能・特徴</dt>
-                        <dd>自動操縦、植物生育モニタリング、農薬散布</dd>
-                    </dl>
+                    <div class="spec__wrapper">
+                        <h4 class="spec__title">機体</h4>
+                        <dl class="spec__list">
+                            <dt>ドローン名</dt>
+                            <dd>アグリ・ファルコン</dd>
+                            <dt>製品番号</dt>
+                            <dd>AGF-100</dd>
+                            <dt>飛行時間</dt>
+                            <dd>60 分</dd>
+                            <dt>最大積載量</dt>
+                            <dd>5 kg</dd>
+                            <dt>操作距離</dt>
+                            <dd>3 km</dd>
+                            <dt>機体重量</dt>
+                            <dd>8 kg</dd>
+                            <dt>機体寸法</dt>
+                            <dd>150 x 150 x 40 cm</dd>
+                            <dt>機能・特徴</dt>
+                            <dd>自動操縦、植物生育モニタリング、農薬散布</dd>
+                        </dl>
+                    </div>
                 </section>
             </div><!-- class="products-container" -->
 
             <section class="contac">
-                <h3><a href="/contact">お問い合わせ</a></h3>
+                <div class="contact__wrapper">
+                    <h3 class="contact__btn"><a href="/contact">お問い合わせ</a></h3>
+                </div>
             </section>
         </article>
     </main>
@@ -145,6 +153,8 @@
     </footer>
 
     <!-- SwiperのJS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="price.js"></script>
 </body>
 </html>

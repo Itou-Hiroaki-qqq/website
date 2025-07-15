@@ -17,25 +17,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+    <link rel="stylesheet" href="faq.css">
 </head>
 <body>
-    <header class="wrapper">
-        <h1 class="site-title"><a href="../index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a></h1>
-        <nav class="nav">
-            <div class="nav__header">
-                <a class="nav__name" href="../index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a>
-                <button class="nav__close" type="button" aria-label="メニューを閉じる"></button>
-            </div>
-            <ul class="nav__list">
-                <li class="nav__item"><a href="../price/index.html">価格・スペック</a></li>
-                <li class="nav__item nav__item--green"><a href="../faq/index.html">よくあるご質問</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="wrapper wrapper--header">
+            <h1 class="site-title"><a href="index.html"><img src="../assets/images/01_header/logo.svg" alt="Kirameki Farm"></a></h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../website/price/index.html">価格・スペック</a></li>
+                    <li class="nav__item nav__item--current"><a href="../website/faq/index.html">よくあるご質問</a></li>
+                </ul>
+            </nav>
 
-        <!-- humburgar -->
-        <button class="humburgar" type="button" aria-label="メニューを開く">
-            <img src="assets/images/01_header/hamburgar.svg" alt="">
-        </button>
+            <!-- humburgar -->
+            <button class="humburgar" type="button" aria-label="メニューを開く">
+                <img src="../assets/images/01_header/hamburgar.svg" alt="">
+            </button>
+            <button class="nav__close" type="button" aria-label="メニューを閉じる"></button>
+        </div>
     </header>
 
     <main>
@@ -296,5 +299,8 @@
             </ul>
         </nav>
     </footer>
+
+    <!-- js -->
+    <script src="faq.js"></script>
 </body>
 </html>

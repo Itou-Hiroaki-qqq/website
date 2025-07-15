@@ -3,17 +3,17 @@
     https://example.com/spec/
     https://example.com/faq/
 
-◆横幅768px未満：SP表示
-横幅768px以上：PC表示
+    ◆横幅768px未満：SP表示
+    横幅768px以上：PC表示
 
-◆デザインで使用されているフォントは以下の4種類になります。
-・Noto Sans JP Regular（https://fonts.google.com/noto/specimen/Noto+Sans+JP?query=noto+sans+jp）
-・Noto Sans JP Bold（https://fonts.google.com/noto/specimen/Noto+Sans+JP?query=noto+sans+jp）
-・Montserrat SemiBold（https://fonts.google.com/specimen/Montserrat?query=Montserrat）
-・Montserrat Bold（https://fonts.google.com/specimen/Montserrat?query=Montserrat）
+    ◆デザインで使用されているフォントは以下の4種類になります。
+    ・Noto Sans JP Regular（https://fonts.google.com/noto/specimen/Noto+Sans+JP?query=noto+sans+jp）
+    ・Noto Sans JP Bold（https://fonts.google.com/noto/specimen/Noto+Sans+JP?query=noto+sans+jp）
+    ・Montserrat SemiBold（https://fonts.google.com/specimen/Montserrat?query=Montserrat）
+    ・Montserrat Bold（https://fonts.google.com/specimen/Montserrat?query=Montserrat）
 
-font-family: "Noto Sans JP", sans-serif;
-font-family: "Montserrat", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
     ◆リンク先指定
     価格・スペック	/price
@@ -32,46 +32,46 @@ font-family: "Montserrat", sans-serif;
     なし（アコーディオンのみ）
 
 
-◆クローズボタン
-.close-btn {
-  position: relative;
-  width: 32px; /* ボタン全体のサイズ */
-  height: 32px; /* ボタン全体のサイズ */
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+    ◆クローズボタン
+    .close-btn {
+      position: relative;
+      width: 32px; /* ボタン全体のサイズ */
+      height: 32px; /* ボタン全体のサイズ */
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-.close-btn::before,
-.close-btn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24px; /* ← ここを調整（長くしたいなら数値を大きく）*/
-  height: 2px; /* ← ここを調整（太くしたいなら数値を大きく）*/
-  background-color: #333; /* ← 任意の色に変更 */
-  transform-origin: center;
-}
+    .close-btn::before,
+    .close-btn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px; /* ← ここを調整（長くしたいなら数値を大きく）*/
+      height: 2px; /* ← ここを調整（太くしたいなら数値を大きく）*/
+      background-color: #333; /* ← 任意の色に変更 */
+      transform-origin: center;
+    }
 
-.close-btn::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
+    .close-btn::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
 
-.close-btn::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
+    .close-btn::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
 
-◆線の色が途中から変わる装飾
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #168352 15%, #ddd 15%);
-}
+    ◆線の色が途中から変わる装飾
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #168352 15%, #ddd 15%);
+    }
 
 ◆アコーディオンの実装例
 html
@@ -191,4 +191,4 @@ css
   transform: translateY(-50%);
 }
 
-◆ヘッダー、フッターをいじった可能性があるので、price,faqで注意
+    ◆ヘッダー、フッターをいじった可能性があるので、price,faqで注意
