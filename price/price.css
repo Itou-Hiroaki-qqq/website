@@ -54,6 +54,9 @@ img {
 /* common PC */
 @media  (min-width:769px) {
 
+    .products-container {
+      padding: 0;
+    }
     .products-topic {
       font-size: 1.75rem;
       padding-bottom: 24px;
@@ -255,13 +258,13 @@ subpage-hero
 }
 
 .subpage-hero__title {
-  margin-top: 32px;
+  margin-top: 22px;
   font-size: 1.875rem;
   font-weight: bold;
 }
 
 .subpage-hero__nav {
-  margin-top: 32px;
+  margin-top: 18px;
 }
 
 .subpage-hero__breadcrumb {
@@ -277,6 +280,8 @@ subpage-hero
 /* パンくず用矢印の作成 */
 .subpage-hero__breadcrumb-item:first-of-type {
   position: relative;
+  /* 調整 */
+  translate: 3px 0px;
 }
 
 .subpage-hero__breadcrumb-item:first-of-type::after {
@@ -290,11 +295,21 @@ subpage-hero
   transform: rotate(-45deg);
   transform-origin: center;
   vertical-align: 1px; /* ← 縦位置を調整 */
+  /* 調整 */
+  translate: -3px 0px;
+}
+
+.subpage-hero__breadcrumb-item:last-of-type {
+  translate: 2px 0px;
 }
 
 
 /* subpage-hero PC */
 @media  (min-width:769px) {
+    .wrapper--subpage-hero {
+      padding: 0;
+    }
+
     .subpage-hero {
       margin-top: 154px;
     }
@@ -323,7 +338,7 @@ subpage-hero
     }
 
     .subpage-hero__nav {
-      margin-top: 24px;
+      margin-top: 15px;
     }
 
     .subpage-hero__breadcrumb-item a {
@@ -337,11 +352,11 @@ subpage-hero
 gallery
 ================================================ */
 .gallery {
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .swiper {
-  margin-top: 32px;
+  margin-top: 25px;
   width: 100%;
   height: 100%;
   /* ページネーションのためのposition */
@@ -382,7 +397,15 @@ gallery
 /* gallery PC */
 @media  (min-width:769px) {
     .gallery {
-      margin-top: 63px;
+      margin-top: 54px;
+    }
+
+    .swiper {
+      margin-top: 32px;
+    }
+
+    .swiper-pagination {
+      translate: 0px -8px;
     }
 
 } /* @media  (min-width:769px) */
@@ -392,7 +415,7 @@ gallery
 merit
 ================================================ */
 .merit {
-  margin-top: 59px;
+  margin-top: 55px;
 }
 
 .merit__list {
@@ -400,7 +423,7 @@ merit
 }
 
 .merit__item:not(:first-of-type) {
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 .merit__item img {
@@ -416,11 +439,32 @@ merit
   font-weight: bold;
 }
 
+.merit__item:nth-of-type(1) p {
+  /* 調整 */
+  margin-top: 7px;
+  line-height: 1.68;
+}
+
+.merit__item:nth-of-type(2) p {
+  /* 調整 */
+  margin-top: 8px;
+  line-height: 1.7;
+  line-break: anywhere;
+  letter-spacing: 0.005em;
+}
+
+.merit__item:nth-of-type(3) p {
+  /* 調整 */
+  margin-top: 8px;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
+
 
 /* merit PC */
 @media  (min-width:769px) {
     .merit {
-      margin-top: 67px;
+      margin-top: 60px;
     }
 
     .merit__list {
@@ -441,6 +485,12 @@ merit
       object-fit: cover;
     }
 
+    .merit__item:nth-of-type(1) p,
+    .merit__item:nth-of-type(2) p,
+    .merit__item:nth-of-type(3) p {
+      line-height: 1.75;
+    }
+
 } /* @media  (min-width:769px) */
 
 
@@ -448,11 +498,11 @@ merit
 price
 ================================================ */
 .price {
-  margin-top: 64px;
+  margin-top: 53px;
 }
 
 .price__txt {
-  margin-top: 24px;
+  margin-top: 16px;
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: bold;
@@ -467,11 +517,11 @@ price
 /* price PC */
 @media  (min-width:769px) {
     .price {
-      margin-top: 72px;
+      margin-top: 57px;
     }
 
     .price__txt {
-      margin-top: 32px;
+      margin-top: 25px;
       font-size: 2rem;
     }
 
@@ -482,8 +532,8 @@ price
 spec
 ================================================ */
 .spec {
-  margin-top: 64px;
-  padding-bottom: 64px;
+  margin-top: 53px;
+  padding-bottom: 68px;
 }
 
 .spec__title {
@@ -504,7 +554,7 @@ spec
 
 .spec__list dt {
   width: 100%;
-  padding: 12px 12px 12px 20px;
+  padding: 7px 12px 8px 20px;
   background-color: #f5f5f5;
   font-size: 1rem;
   font-weight: bold;
@@ -513,17 +563,22 @@ spec
 
 .spec__list dd {
   width: 100%;
-  padding: 12px 12px 12px 20px;
+  padding: 6px 12px 7px 20px;
   background-color: #fff;
   font-size: 1rem;
   border: 1px solid #ddd;
+}
+
+/* 調整 */
+.adjusts {
+  translate: -2px 1px;
 }
 
 
 /* spec PC */
 @media  (min-width:769px) {
     .spec {
-      margin-top: 72px;
+      margin-top: 60px;
       padding-bottom: 72px;
     }
 
@@ -538,17 +593,31 @@ spec
     }
 
     .spec__list {
-      margin-top: 24px;
+      margin-top: 23px;
       display: grid;
       grid-template-columns: 200px 1fr;
     }
 
     .spec__list dt {
-      padding: 24px 20px;
+      padding: 19px 20px 20px 20px;
     }
 
     .spec__list dd {
-      padding: 25px 24px 25px 24px;
+      padding: 19px 20px 20px 20px;
+    }
+
+    /* 調整 */
+    .spec__list .spec__adjust1 {
+      padding: 18px 20px 18px 20px;
+    }
+    .spec__list .spec__adjust2 {
+      padding: 18px 20px 18px 20px;
+    }
+    .adjusts {
+      translate: 1px -1px;
+    }
+    .spec__list .spec__adjust3 {
+      padding: 19px 20px 16px 20px;
     }
 
 } /* @media  (min-width:769px) */
@@ -608,6 +677,10 @@ contac
       padding: 0 16px;
     }
 
+    .contact__btn a {
+      translate: 0px -1px;
+    }
+
 } /* @media  (min-width:769px) */
 
 
@@ -662,10 +735,14 @@ footer {
 
     .footer-nav__item:first-of-type {
       padding-right: 22px;
+      /* 調整 */
+      translate: 5px 0px;
     }
 
     .footer-nav__item:last-of-type {
       padding-left: 22px;
+      /* 調整 */
+      translate: 0px -2px;
     }
 
 } /* @media  (min-width:769px) */
